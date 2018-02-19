@@ -52,10 +52,10 @@ class TasksController extends Controller
             'content' => 'required|max:255',
         ]);
 
-        $tasks = new Tasks;
+        $task = new Tasks;
         $task->title = $request->title;
         $task->content = $request->content;
-        $tasks->save();
+        $task->save();
 
         return redirect('/');
     }
@@ -104,10 +104,10 @@ class TasksController extends Controller
             'content' => 'required|max:255',
         ]);
 
-        $tasks = Tasks::find($id);
-        $message->title = $request->title;
-        $tasks->content = $request->content;
-        $tasks->save();
+        $task = Tasks::find($id);
+        $task->title = $request->title;
+        $task->content = $request->content;
+        $task->save();
 
         return redirect('/');
     }
