@@ -4,7 +4,10 @@
 
    <h1>id: {{ $tasks->id }} のタスク編集ページ</h1>
 
-    {!! Form::model($tasks, ['route' => ['tasks.update', $tasks->id], 'method' => 'put']) !!}
+    {!! Form::model($tasks, ['route' => ['tasks.update', $task->id], 'method' => 'put']) !!}
+
+        {!! Form::label('title', 'タイトル:') !!}
+        {!! Form::text('title') !!}
 
         {!! Form::label('content', 'タスク:') !!}
         {!! Form::text('content') !!}
