@@ -53,8 +53,8 @@ class TasksController extends Controller
         ]);
 
         $tasks = new Tasks;
-        $message->title = $request->title;
-        $tasks->content = $request->content;
+        $task->title = $request->title;
+        $task->content = $request->content;
         $tasks->save();
 
         return redirect('/');
