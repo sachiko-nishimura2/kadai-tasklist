@@ -17,7 +17,7 @@
                 @foreach ($tasks as $tasks)
                     <tr>
                         <td>{!! link_to_route('tasks.show', $tasks->id, ['id' => $tasks->id]) !!}</td>
-                        <td>{{ $tasks->title }}</td>
+                        <td>{{ $tasks->status }}</td>
                         <td>{{ $tasks->content }}</td>
                     </tr>
                 @endforeach
