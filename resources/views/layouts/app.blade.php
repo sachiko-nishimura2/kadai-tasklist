@@ -20,9 +20,6 @@
             @include('commons.error_tasks')
 
             @yield('content')
-
-          　　  　</div>
-          　</div>
         </div>
     </body>
 </html>
